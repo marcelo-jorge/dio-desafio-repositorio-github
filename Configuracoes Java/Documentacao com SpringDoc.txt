@@ -1,0 +1,20 @@
+Para utilizar documentação com OpenAPI-UI favor adcionar a bliblioteca:
+
+springdoc-apenapi-ui:1.2.32
+
+
+incluir esta função na classe principal do spring
+@Bean
+public OpenAPI customOpenAPI(){
+	return new OpenAPI().info(
+	
+	new Info()
+	.title("Titulo")
+	.version("Versão 1.0")
+	.termsOfService("http://swagger.io/terms")
+	.license(new License()
+		.name("Apache 2.0")
+		.url("http://springdoc.org")
+		)
+	);
+}
